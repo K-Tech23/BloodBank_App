@@ -1,0 +1,38 @@
+<!-- <div class="loginbody"> 
+    <img src="http://i.imgur.com/GHr12sH.jpg" alt=""></div> -->
+<div class="container">
+
+  <div class="row" id="pwd-container">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+      <section class="login-form">
+        <form method="post" action="#" role="login">
+          <img src="../../assets/images/logo.jpg" class="img-responsive" alt="" />
+          <span *ngIf="validationFailed" style="color:red">
+         Invalid Email or Password
+            </span>
+
+          <input type="email" name="email" placeholder="Email" required class="form-control input-lg" [(ngModel)]="input.email" />
+
+          <input type="password" class="form-control input-lg" name="password" placeholder="Password" required="" [(ngModel)]="input.password"
+          />
+
+          <button type="submit" (click)="login(input)" class="btn btn-lg btn-danger btn-block">Login</button>
+          <div>
+            <a [routerLink]="['/signup']">Create account</a>
+          </div>
+
+        </form>
+
+        <div class="form-links">
+          <a href="#">www.bloodonor.com</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="col-md-4"></div>
+
+
+  </div>
+</div>

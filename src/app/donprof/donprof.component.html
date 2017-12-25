@@ -1,0 +1,76 @@
+
+            <div class="panel-body">
+              <div class="row">
+                
+              <!-- <div class=" col-md-9 col-lg-9 ">  -->
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Name:</td>
+                        <td>{{data.name}}</td>
+                      </tr>
+                      <tr>
+                          <td>Email:</td>
+                          <td>{{data.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Age:</td>
+                            <td>{{data.details.age}}</td>
+                          </tr>
+                          <tr>
+                              <td>Weight:</td>
+                              <td>{{data.details.weight}}</td>
+                            </tr> 
+                            <tr>
+                                <td>Donation Date</td>
+                                <td>{{data.details.donationDate}}</td>
+                              </tr>
+
+                            <tr>
+                        <td>Blood Group</td>
+                        <td>{{data.details.bloodGroup}}</td>
+                      </tr>
+                    <tr>   
+                      <td>Contact Number</td>
+                        <td>{{data.details.contactNumber}}</td>
+                      </tr>
+                      <tr>
+                          <td>Address</td>
+                          <td>{{data.details.address}}</td>
+                        </tr>
+                     
+                    </tbody>
+                  </table>
+                  
+                 
+                <!-- </div> -->
+              </div>
+            </div>
+                 <div class="panel-footer">
+                        <p class="text-center">www.bloodonor.com</p>
+                    </div>
+            
+          <!-- </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
+      <form *ngIf="editItemsForm">
+            <h2>Edit Details</h2>
+            <p>ID:
+              <input type="text" name="name" [(ngModel)]="editedItems.name" />
+            </p>
+            <p>Blood Bank Name:
+              <input type="text" name="bloodGroup" [(ngModel)]="editedItems.bloodGroup" />
+            </p>
+            <p>Branch:
+              <input type="text" name="address" [(ngModel)]="editedItems.address" />
+            </p>
+            <p>Incharge:
+              <input type="text" name="email" [(ngModel)]="editedItems.email" />
+            </p>
+            <p>
+              <button type="button" class="btn btn-danger" (click)="updateItems(editedItems)">Submit</button>
+              <button type="button" class="btn btn-danger" (click)="cancelEdits()">Cancel</button>
+            </p>
+          </form>
+    <!-- </div> -->
+  

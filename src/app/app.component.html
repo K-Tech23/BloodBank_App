@@ -1,0 +1,71 @@
+<!-- header -->
+<div class="head">
+  <img src="../assets/images/header.jpg" alt="">
+</div>
+<!-- header end   -->
+<!-- navbar -->
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">BlooDonor</a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <a *ngIf="isUserLoggedIn">Profile</a>
+        </li>
+        <li>
+          <a [routerLink]="['/main']">Home</a>
+        </li>
+        <li>
+          <a href="#about">About us</a>
+        </li>
+        <li>
+          <a href="#contact">Contact us</a>
+        </li>
+        <li>
+          <a *ngIf="isSuperAdminLoggedIn" [routerLink]="['/adminlist']">Manage Admin List</a>
+        </li>
+        <li *ngIf="isAdminLoggedIn">
+          <a [routerLink]="['/admin/arecieverslist']">Manage Reciever List</a>
+        </li>
+        <li *ngIf="isAdminLoggedIn">
+          <a>Manage Donor List</a>
+        </li>
+        <li *ngIf="isUserLoggedIn">
+          <a>Blood Banks</a>
+        </li>
+
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a class="dropdown-toggle"  data-toggle="dropdown" [routerLink]="['/signup']">
+            <!-- <p class="navbar-text"> -->
+              Already have an account?
+            <!-- </p> -->
+          </a>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" *ngIf="isLoggedOut" data-toggle="dropdown" [routerLink]="['/login']">
+            <span class="glyphicon glyphicon-log-in"></span> Login</a>
+
+        </li>
+        <li class="dropdown" *ngIf="isLoggedIn">
+          <a class="dropdown-toggle" data-toggle="dropdown" (click)='logout()'>
+            <span class="glyphicon glyphicon-log-out"></span> Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- navbar end -->
+<<router-outlet></router-outlet>

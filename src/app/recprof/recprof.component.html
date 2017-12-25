@@ -1,0 +1,89 @@
+
+
+<div class="container" >
+  
+  <div class="row" id="pwd-container">
+    <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+         
+
+      
+     
+
+    </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" class="mbox" >
+ 
+ 
+        <div  >
+            <span class="pull-left">
+                <a  (click)="showEditItemsForm(item)" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-edit"></i> Edit Profile</a>
+                <!-- <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a> -->
+            </span>
+            <br>  
+            <hr>  
+          <div class="panel-heading">
+            
+            
+            <h1 class="panel-title">Reciever's Profile</h1>
+            
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              
+            <!-- <div class=" col-md-9 col-lg-9 ">  -->
+                <table class="table table-user-information" text="white">
+                  <tbody>
+                    <tr>
+                      <td>Name:</td>
+                      <td>{{data.name}}</td>
+                    </tr>
+                    <tr>
+                      <td>Blood Group</td>
+                      <td>{{data.details.bloodGroup}}</td>
+                    </tr>
+                  <tr>
+                      <td>Address</td>
+                      <td>{{data.details.address}}</td>
+                    </tr>
+                    <tr>
+                      <td>Email</td>
+                      <td>{{data.email}}</td>
+                    </tr>
+                    <tr>   
+                    <td>Phone Number</td>
+                      <td>{{data.details.contactNumber}}</td>
+                    </tr>
+                   
+                  </tbody>
+                </table>
+                
+               
+              <!-- </div> -->
+            </div>
+          </div>
+               <div class="panel-footer">
+                      <p class="text-center">www.bloodonor.com</p>
+                  </div>
+          
+        </div>
+      </div>
+    </div>
+    <form *ngIf="editItemsForm">
+          <h2>Edit Details</h2>
+          <p>ID:
+            <input type="text" name="name" [(ngModel)]="editedItems.name" />
+          </p>
+          <p>Blood Bank Name:
+            <input type="text" name="bloodGroup" [(ngModel)]="editedItems.bloodGroup" />
+          </p>
+          <p>Branch:
+            <input type="text" name="address" [(ngModel)]="editedItems.address" />
+          </p>
+          <p>Incharge:
+            <input type="text" name="email" [(ngModel)]="editedItems.email" />
+          </p>
+          <p>
+            <button type="button" class="btn btn-danger" (click)="updateItems(editedItems)">Submit</button>
+            <button type="button" class="btn btn-danger" (click)="cancelEdits()">Cancel</button>
+          </p>
+        </form>
+  </div>

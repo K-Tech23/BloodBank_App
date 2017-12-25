@@ -1,0 +1,31 @@
+
+
+  <div class="jumbotron"><h1 class="text-center">Admin Panel</h1></div>
+  
+  <!-- Main Body -->
+
+  		<div class="col-sm-2"><!--left col-->
+              
+          <ul class="list-group">
+            <li class="list-group-item text-muted" class="bg">Profile</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Admin Name</strong></span>{{data.details.manager}}</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Blood Bank</strong></span>{{data.name}}</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Branch</strong></span> Nazimabad</li> 
+          </ul> 
+         
+          
+               
+          
+          
+          
+          
+        </div><!--/col-3-->
+    	<div class="col-sm-9">
+          
+          <ul class="nav nav-tabs" id="myTab">
+            <li ><a [routerLink]="['/admin']" data-toggle="tab">Donor List</a></li>
+            <li><a [routerLink]="['/admin/arecieverslist']" data-toggle="tab">Reciever List</a></li>
+            <li><a [routerLink]="['/admin/bloodstock']" data-toggle="tab">Blood Stock List</a></li>
+          </ul>
+              <router-outlet></router-outlet>
+              </div><!--/row-->

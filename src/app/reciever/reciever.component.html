@@ -1,0 +1,59 @@
+<div class="container">
+
+  <div class="row" id="pwd-container">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+      <section class="login-form">
+        <form method="post" action="#" role="login">
+          <img src="../../assets/images/logo.jpg" class="img-responsive" alt="" />
+          <h1>Signup</h1>
+          <p *ngIf="validationFailed" style="color:red">
+           Invalid Credentials
+          </p>
+          <br/>
+          <ul class="nav nav-tabs" id="myTab">
+            <li><a [routerLink]="['/signup']" data-toggle="tab">As Donor</a></li>
+            <li class="active"><a data-toggle="tab">As Reciever</a></li>
+          </ul>
+          <input id="donor" type="text" name="name" placeholder="Name" required class="form-control input-lg" [(ngModel)]="input.name"
+          />
+          <input type="email" name="email" placeholder="Email" required class="form-control input-lg" [(ngModel)]="input.email" />
+          <input type="password" class="form-control input-lg" name="password" placeholder="Password" required="" [(ngModel)]="input.password"
+          />
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Blood Group</span>
+            <select class="form-control input-sm" name="bloodGroup" [(ngModel)]="input.bloodGroup" id="inputsm" data-style="btn-danger" id="sel1">
+                      <option>A+</option>
+                      <option>A-</option>
+                      <option>AB+</option>
+                      <option>AB-</option>
+                      <option>B+</option>
+                      <option>B-</option>
+                      <option>O+</option>
+                      <option>O-</option>
+                    </select>
+          </div>
+          <input type="number" name="contact" placeholder="Contact" required class="form-control input-lg" [(ngModel)]="input.contactNumber"
+          />
+
+          <textarea type="text" name="address" placeholder="Address" required class="form-control input-lg" [(ngModel)]="input.address"></textarea>
+
+          <button type="submit" (click)="recieverSignup(input)" class="btn btn-lg btn-danger btn-block">Signup</button>
+          <div>
+            <a [routerLink]="['/login']">Already registered ? Login Here</a>
+          </div>
+
+        </form>
+
+        <div class="form-links">
+          <a href="#">www.bloodonor.com</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="col-md-4"></div>
+
+
+  </div>
+</div>

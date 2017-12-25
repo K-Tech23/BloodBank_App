@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+
+    
+    <div class="col-sm-10">
+      <h1>Adul Wahab</h1>
+    </div>
+  </div>
+  <!-- <div class="row">
+
+  </div> -->
+  <!--/col-3-->
+  <div class="col-sm-9">
+
+    <br>
+   
+    <ul class="nav nav-tabs" id="myTab">
+      <li class="active">
+        <a [routerLink]="['/adminlist']" data-toggle="tab">Manage Admins</a>
+      </li>
+      <li>
+        <a [routerLink]="['/donorslist']" data-toggle="tab">Manage Donors</a>
+      </li>
+      <li>
+        <a [routerLink]="['/recieverslist']" data-toggle="tab">Manage Recievers</a>
+      </li>
+    </ul>
+          
+      <div class="tab-content">
+          
+                <div class="tab-pane active" id="home">
+                  <!-- <div class="table-responsive"> -->
+                  <div class="container">
+                    <div class="col-md-12">
+                      <router-outlet></router-outlet> 
+                    <!--  </div> -->
+                  </div>
+                  <hr>
+                </div> 
+                <!--/tab-pane-->
+              </div>
+              <!--/tab-content-->
+          
+                  <!-- </div>/table-resp -->
+          
+                
+          
+          
+          
+               
+          

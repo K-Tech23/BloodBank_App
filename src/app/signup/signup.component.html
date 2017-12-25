@@ -1,0 +1,66 @@
+<!-- <div class="loginbody"> -->
+  <!-- <img src="http://i.imgur.com/GHr12sH.jpg" alt=""></div> -->
+<div class="container">
+
+  <div class="row" id="pwd-container">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+      <section class="login-form">
+        <form method="post" action="#" role="login">
+          <img src="../../assets/images/logo.jpg" class="img-responsive" alt="" />
+          <h1>Signup</h1>
+          <p *ngIf="validationFailed" style="color:red">
+              Invalid Credentials
+          </p>
+          <br/>
+          <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#donor" data-toggle="tab">As Donor</a></li>
+            <li><a [routerLink]="['/reciever']" data-toggle="tab">As Reciever</a></li>
+          </ul>
+          <input id="donor" type="text" name="name" placeholder="Name" required class="form-control input-lg" [(ngModel)]="input.name"
+          />
+          <input type="email" name="email" placeholder="Email" required class="form-control input-lg" [(ngModel)]="input.email" />
+          <input type="password" class="form-control input-lg" name="password" placeholder="Password" required="" [(ngModel)]="input.password"
+          />
+          <input type="text" name="age" placeholder="Age" required class="form-control input-lg" [(ngModel)]="input.age" />
+          <input type="text" name="weight" placeholder="Weight" required class="form-control input-lg" [(ngModel)]="input.weight"
+          />
+          <input type="date"  name="donationDate" placeholder="Last Donation" required class="form-control input-lg" [(ngModel)]="input.donationDate"
+          />
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Blood Group</span>
+            <select class="form-control input-sm" id="inputsm" name="bloodGroup" [(ngModel)]="input.bloodGroup" data-style="btn-danger" id="sel1">
+                <option selected>Select</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>O+</option>
+                <option>O-</option>
+                  </select>
+          </div>
+
+          <input type="text" name="contactNumber" placeholder="Contact" required class="form-control input-lg" [(ngModel)]="input.contactNumber"
+          />
+          <textarea type="text" name="address" placeholder="Address" required class="form-control input-lg" [(ngModel)]="input.address"> </textarea>
+          <button type="submit" (click)="donorSignup(input)"  class="btn btn-lg btn-danger btn-block">Signup</button>
+          <div>
+            <a [routerLink]="['/login']">Already registered ? Login Here</a>
+          </div>
+
+        </form>
+
+        <div class="form-links">
+          <a href="#">www.bloodonor.com</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="col-md-4"></div>
+
+
+  </div>
+</div>
