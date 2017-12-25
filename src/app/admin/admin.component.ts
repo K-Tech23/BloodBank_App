@@ -1,8 +1,8 @@
+
 import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
 import { SuperadminService } from "../super-admin/super-admin.component.service";
 import { SuperAdmin } from "../super-admin/super-admin";
-
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',

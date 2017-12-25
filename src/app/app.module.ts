@@ -64,7 +64,7 @@ import { UserService } from "./user.service";
       },
       {
         path: 'admin',
-        canActivate:[AuthguardGuard],
+        // canActivate:[AuthguardGuard],
         component: AdminComponent,
         children:[
           { path: 'arecieverslist',
@@ -80,7 +80,7 @@ import { UserService } from "./user.service";
       },
       {
         path: 'superadmin',
-        canActivate:[AuthguardGuard],
+        // canActivate:[AuthguardGuard],
         children:[
           { path: '',
           component: AdminlistComponent
@@ -109,7 +109,7 @@ import { UserService } from "./user.service";
       },
       {
         path: 'donprofstruct',
-        canActivate:[AuthguardGuard],
+        // canActivate:[AuthguardGuard],
         children:[
           {
             path: '',

@@ -15,7 +15,17 @@ export class AdminlistComponent implements OnInit {
   newItems: any = {
     type: 'admin',
     details: {
+      // bloodStocks: {
+      //   A_pos :0,
+      //   A_min :0,
+      //   B_pos :0,
+      //   B_min :0,
+      //   AB_pos :0,
+      //   AB_min :0,
+      //   O_pos :0,
+      //   O_min :0,
 
+      // }
     }
   };
   editedItems: any = {};
@@ -189,7 +199,7 @@ export class AdminlistComponent implements OnInit {
       console.log("sdhjahdjka")
     }
   }
-  showmessage(){
+  showmessage() {
     console.log("Thanks for donating us")
   }
 

@@ -29,7 +29,7 @@ export class RecieverslistComponent implements OnInit {
 
   data;
   getItems() {
-    var url = 'bloodBankUser' + "/" + "reciever";
+    var url = 'allBloodBankUser' + "/" + "receiver";
     console.log(url, "url")
     this._itemService.getItems(url).subscribe(
       (data) => {

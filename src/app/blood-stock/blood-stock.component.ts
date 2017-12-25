@@ -14,16 +14,6 @@ export class BloodStockComponent implements OnInit {
   newItems: any = {};
   editedItems: any = {};
 
-//   data= {
-//   a1: 2,
-//   a2: 3,
-//   b1: 4,
-//   b2: 2,
-//   ab1: 1,
-//   ab2: 4,
-//   o1: 5,
-//   o2: 0
-// }
 data;
 constructor(private _itemService: SuperadminService) { }
 
@@ -32,9 +22,9 @@ ngOnInit() {
 }
 
 getItems() {
-  var id = localStorage.getItem("currentUser")
-  var url = "bloodBankUser" + "/" + JSON.parse(id);
-  
+  var currentUser = localStorage.getItem("currentUser")
+  var user = JSON.parse(currentUser)  
+  var url = "bloodBnakUser"+"/"+user.UserId
   this._itemService.getItems(url).subscribe(
     (data) => {
       console.log(data.recieverData, "fgdfg");

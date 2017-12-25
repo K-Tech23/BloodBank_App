@@ -31,7 +31,7 @@ export class DonorslistComponent implements OnInit {
 
   data;
   getItems() {
-    var url = 'bloodBankUser' + "/" + "donor";
+    var url = 'allBloodBankUser' + "/" + "donor";
     console.log(url, "url")
     this._itemService.getItems(url).subscribe(
       (data) => {

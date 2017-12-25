@@ -8,7 +8,7 @@ import { findIndex } from 'lodash';
 export class SuperadminService {
   constructor(private _http: Http) { }
   base_url = 'http://localhost:3000/blooDonor/'
-
+  data = null;
 
   getItems(data) {
     console.log(data, "data in get item")
